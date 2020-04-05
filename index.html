@@ -1,10 +1,24 @@
-<!doctype html>
-<html lang="zh-cn">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+<meta charset="utf-8">
+<title>jquery测试</title>
+<script src="jquery-1.12.4.js">
+</script>
+<script>
+function afterText(){
+	var txt1="<b>I </b>";                    // 使用 HTML 创建元素
+	var txt2=$("<i></i>").text("love ");     // 使用 jQuery 创建元素
+	var txt3=document.createElement("big");  // 使用 DOM 创建元素
+	txt3.innerHTML="jQuery!";
+	$("img").after(txt1,txt2,txt3);          // 在图片后添加文本
+}
+</script>
 </head>
 <body>
-	你们好!
+
+<br><br>
+<button onclick="afterText()">之后插入</button>
+
 </body>
 </html>
